@@ -204,3 +204,13 @@
     height: 120%;
     border: none;
   }
+
+  .image-fit-contain {
+    width: 100%;
+    height: auto;
+    aspect-ratio:3/ 3; /* Matches the .project.tall container */
+    object-fit: contain;
+    display: block;
+    background: #2a2a2a; /* Optional: background behind image */
+    border-radius: 10px;
+  }
