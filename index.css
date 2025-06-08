@@ -68,10 +68,10 @@
   .image-placeholder {
     width: 100%;
     aspect-ratio: 4 / 3;
-    background: #2a2a2a;
+    object-fit: cover;
     border-radius: 10px;
+    display: block;
     margin-bottom: 0.5rem;
-    border: 1px solid #333;
   }
   
   /* Asymmetrical Variants */
@@ -164,3 +164,43 @@
     }
   }
   
+  .rotating-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .rotating-images {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  
+  .rotating-images img.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .video-placeholder {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* or 16/9 if you prefer */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .video-placeholder iframe {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    border: none;
+  }

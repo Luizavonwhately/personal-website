@@ -24,83 +24,109 @@
 
   <section class="grid">
     <a href="Tavoli.html" class="project large">
-      <div class="image-placeholder" img src="media/tavoli/frame-animation.gif" ></div>
+        <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
       <h3>Tavoli</h3>
     </a>
 
     <a href="aeon_marathon.html" class="project">
-      <div class="image-placeholder"></div>
-     </div>
+      <div class="image-placeholder rotating-images">
+        <img src="media/aeon/5 aeon post.png" alt="Home frame" />
+        <img src="media/aeon/Screenshot 2025-06-02 at 4.03.56 PM.png" alt="Home frame" />
+      </div>
       <h3>Aeon Marathon</h3>
     </a>
+    
 
     <a href="runyc.html" class="project tall">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media" alt="Tavoli project preview">
+     
       <h3>ruNYc</h3>
     </a>
 
     <a href="be-present.html" class="project large">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>Be Present</h3>
     </a>
 
     <a href="forest_friday.html" class="project wide">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/forest friday/scans_Page_16_Image_0001.jpg" alt="Tavoli project preview">
+     
       <h3>Forest Fridays</h3>
     </a>
 
     <a href="home_book.html" class="project large">
-      <div class="image-placeholder"></div>
+      <div class="image-placeholder rotating-images">
+        <img src="media/first_universe/whately_luiza_firstUniverse_02.jpg" alt="Home frame" />
+        <img src="media/first_universe/whately_luiza_firstUniverse_03.jpg" alt="Home frame" />
+      </div>
       <h3>First Universe</h3>
     </a>
 
     <a href="hohe.html" class="project">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/HoHe/poster.png" alt="Tavoli project preview">
+     
       <h3>HoHe</h3>
     </a>
 
     <a href="lampali.html" class="project">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>Lampali</h3>
     </a>
 
     <a href="evil-witch.html" class="project">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>The Evil Witch is Dead!</h3>
     </a>
 
     <a href="more-swag.html" class="project wide">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>More Swag</h3>
     </a>
 
     <a href="so-nois.html" class="project">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>Só Nois</h3>
     </a>
 
     <a href="leafs.html" class="project">
-      <div class="image-placeholder"></div>
+      <div class="video-placeholder">
+        <iframe 
+          src="https://drive.google.com/file/d/1hXpI9SJKvrU9v9D-JeLwmEqgCXj_SIIv/preview?autoplay=1&mute=1" 
+          frameborder="0" 
+          allow="autoplay; fullscreen" 
+          allowfullscreen
+          id="leafs-video">
+        </iframe>
+      </div>
       <h3>Leafs</h3>
     </a>
 
     <a href="tato.html" class="project large">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>TaTo</h3>
     </a>
 
     <a href="mr-blue.html" class="project tall">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>Mr. Blue</h3>
     </a>
 
     <a href="wild-side.html" class="project">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>Wild Side</h3>
     </a>
 
     <a href="africa-series.html" class="project wide">
-      <div class="image-placeholder"></div>
+       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
+     
       <h3>Africa: The Series</h3>
     </a>
   </section>
@@ -116,3 +142,16 @@
 
 </body>
 </html>
+<script>
+  document.querySelectorAll('.rotating-images').forEach(container => {
+    const images = container.querySelectorAll('img');
+    let current = 0;
+    images[current].classList.add('active');
+
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 3000);
+  });
+</script>
