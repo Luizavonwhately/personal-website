@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luiza's Portfolio</title>
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/kef1fqt.css">
+
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>About</h1>
+    <nav>
+      <ul>
+        <li><a href="archive.html">List View</a></li>
+        <li><a href="index.html">Grid View</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-layout">
+    <section class="about-text">
+      <h2>Luiza Whately</h2>
+      <p>
+        Luiza Whately is a designer focused on visual identity, editorial systems, and typographic expression. Her work explores the relationship between structure and intuition — combining conceptual clarity with a sensitive visual approach. She is particularly interested in how design can create meaningful forms of communication that are both precise and emotionally resonant.<br> <br>
+
+        Currently completing her BFA in Communication Design at Parsons School of Design, with a minor in Society, Technology, & Management, Luiza approaches design through an interdisciplinary lens. Her background encourages a balance between analytical thinking and visual experimentation, allowing her to build systems that are as thoughtful as they are expressive.<br> <br>
+        
+        Luiza works independently and in collaboration with studios, institutions, and cultural organizations. Her process values curiosity, research, and collaboration, grounded in the belief that design has the power to shape understanding and strengthen connections between people, ideas, and the visual world.<br> <br>
+
+        - Thanks CHAT
+    </section>
+
+    <section class="about-images">
+      <img src="media/about/image1.jpg" alt="Luiza working on a project">
+      <img src="media/about/image2.jpg" alt="Studio or workspace photo">
+    </section>
+  </main>
+
+  <!-- Floating popup text -->
+  <div id="popup-text"></div>
+
+  <footer class="contact-footer">
+    <p>Contact me:</p>
+    <ul>
+      <li><a href="mailto:luizawhately@gmail.com">luizawhately@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/luiza" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/luiza" target="_blank">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    const popupTexts = [
+      "Let's connect.",
+      "Always up to something",
+      "What else do you do besides work?",
+      "fav movie soundtrack: Baby Driver",
+      "fav museum: TATE ",
+      "fav hobbie: sports"
+    ];
+
+    const popupContainer = document.getElementById('popup-text');
+
+    function showPopup() {
+      const randomText = popupTexts[Math.floor(Math.random() * popupTexts.length)];
+      const randomX = Math.random() * (window.innerWidth - 300);
+      const randomY = Math.random() * (window.innerHeight - 100);
+
+      popupContainer.textContent = randomText;
+      popupContainer.style.left = `${randomX}px`;
+      popupContainer.style.top = `${randomY}px`;
+      popupContainer.classList.add('visible');
+
+      // Hide after 20s
+      setTimeout(() => popupContainer.classList.remove('visible'), 20000);
+    }
+
+    // Initial delay, then repeat every 15s
+    setTimeout(showPopup, 2000);
+    setInterval(showPopup, 15000);
+  </script>
+
+</body>
+</html>

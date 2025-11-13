@@ -1,158 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luiza's Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Luiza's Portfolio</title>
 
-  <header>
-    <h1>Luiza</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Adobe Fonts: Acumin Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/kef1fqt.css">
 
-  <section class="intro">
-    <h2>Selected Projects</h2>
-  </section>
+    <!-- Google Fonts: JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    >
 
-  <section class="grid">
-    <a href="Tavoli.html" class="project large">
-        <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-      <h3>Tavoli</h3>
-    </a>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-    <a href="aeon_marathon.html" class="project">
-      <div class="image-placeholder rotating-images">
-        <img src="media/aeon/5 aeon post.png" alt="Home frame" />
-        <img src="media/aeon/Screenshot 2025-06-02 at 4.03.56 PM.png" alt="Home frame" />
-      </div>
-      <h3>Aeon Marathon</h3>
-    </a>
-    
+  <body>
 
-    <a href="runnyc.html" class="project">
-      <img class="image-fit-contain" src="media/ruunnyc/mainpage copy.png" alt="ruNYc project preview">
-      <h3>ruNYc</h3>
-    </a>
+    <header>
+      <h1>Luiza Whately</h1>
+      <nav>
+        <ul>
+          <li><a href="archive.html">List View</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    <a href="bepresent.html" class="project large">
-      <div class="image-placeholder rotating-images image-fit-contain">
-      <img class="image-fit-contain" src="media/bepresent/spiritual ecology 3 copy.png" alt="be present project preview">
-      <img class="image-fit-contain" src="media/bepresent/spiritual ecology 4 copy.png" alt="be present project preview">
-    </div>
-      <h3>Be Present</h3>
-    </a>
+      
+    </header>
 
-    <a href="forest_friday.html" class="project wide">
-       <img class="image-placeholder" src="media/forest friday/scans_Page_16_Image_0001.jpg" alt="Tavoli project preview">
-     
-      <h3>Forest Fridays</h3>
-    </a>
+  <section class="intro"></section>
 
-    <a href="home_book.html" class="project large">
-      <div class="image-placeholder rotating-images">
-        <img src="media/first_universe/whately_luiza_firstUniverse_02.jpg" alt="Home frame" />
-        <img src="media/first_universe/whately_luiza_firstUniverse_03.jpg" alt="Home frame" />
-      </div>
-      <h3>First Universe</h3>
-    </a>
+    <!-- FILTER BUTTONS -->
+    <section class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Visual Identity">Visual Identity</button>
+      <button class="filter-btn" data-filter="publication">Publication</button>
+      <button class="filter-btn" data-filter="webDesign">Web Design</button>
+      <button class="filter-btn" data-filter="Experiences">Experiences</button>
+      <button class="filter-btn" data-filter="Product">Product</button>
+      <button class="filter-btn" data-filter="Campaign">Campaign</button>
+      <button class="filter-btn" data-filter="SelectedProjects">Selected Projects</button>
+      <button class="filter-btn" data-filter="Typography">Typography</button>
+    </section>
 
-    <a href="hohe.html" class="project">
-       <img class="image-placeholder" src="media/HoHe/poster.png" alt="Tavoli project preview">
-     
-      <h3>HoHe</h3>
-    </a>
+    <!-- GRID -->
+    <section class="grid">
+      <a href="Tavoli.html" class="project large" data-category="SelectedProjects Visual Identity">
+        <div class="image-placeholder rotating-images">
+          <img src="media/tavoli/frame-animation.gif" alt="Home frame" />
+        </div>
+        <h3>Tavoli</h3>
+      </a>
 
-    <a href="lampali.html" class="project tall">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>Lampali</h3>
-    </a>
+      <a href="Educom.html" class="project wide" data-category="Campaign Visual Identity">
+        <div class="image-placeholder rotating-images">
+          <img src="media/educom/gif-educom-instagram.gif" alt="Educom" />
+          <img src="media/educom/educom3.jpg" alt="Educom" />
+        </div>
+        <h3>Educom</h3>
+      </a>
 
-    <a href="thewitch.html" class="project">
-       <img class="image-placeholder" src="media/the witch/dico mock up 2.png" alt="Tavoli project preview">
-     
-      <h3>The Evil Witch is Dead!</h3>
-    </a>
+      <a href="forest_friday.html" class="project large" data-category="publication SelectedProjects">
+        <div class="image-placeholder image-center">
+          <img class="static-img" src="media/forest friday/scans_Page_16_Image_0001.jpg" alt="Forest Fridays" />
+        </div>
+        <h3>Forest Fridays</h3>
+      </a>
 
-    <a href="more-swag.html" class="project wide">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>More Swag</h3>
-    </a>
+      <a href="aeon_marathon.html" class="project" data-category="Experiences Visual Identiry Campaign SelectedProjects">
+        <div class="image-placeholder rotating-images">
+          <img src="media/aeon/5 aeon post.png" alt="Aeon Marathon frame" />
+          <img src="media/aeon/Artboard 15.png" alt="Aeon Marathon frame" />
+        </div>
+        <h3>Aeon Marathon</h3>
+      </a>
 
-    <a href="so-nois.html" class="project">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>Só Nois</h3>
-    </a>
 
-    <a href="leafs.html" class="project">
-      <div class="video-placeholder">
-        <iframe 
-          src="https://drive.google.com/file/d/1hXpI9SJKvrU9v9D-JeLwmEqgCXj_SIIv/preview?autoplay=1&mute=1" 
-          frameborder="0" 
-          allow="autoplay; fullscreen" 
-          allowfullscreen
-          id="leafs-video">
-        </iframe>
-      </div>
-      <h3>Leafs</h3>
-    </a>
+      <a href="pdq.html" class="project full" data-category="Visual Identity Product SelectedProjects Campaign">
+        <div class="image-placeholder image-center">
+          <img class="static-img" src="media/PDQ/gif2.gif" alt="ruNYc project preview">
+        </div>
+        <h3>PDQ?</h3>
+      </a>
 
-    <a href="tato.html" class="project large">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>TaTo</h3>
-    </a>
+      <a href="isa_silva.html" class="project" data-category="Visual Identity Campaign Product">
+        <div class="image-placeholder rotating-images image-center">
+          <img class="static-img" src="media/isa silva/Feed 1.jpg" alt="Isa Silva">
+          <img src="media/isa silva/Isa Silva 10.png" alt="Isa Silva" />
+        </div>
+        <h3>Isa Silva</h3>
+      </a>
 
-    <a href="mr-blue.html" class="project tall">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>Mr. Blue</h3>
-    </a>
+      <a href="home_book.html" class="project wide" data-category="publication">
+        <div class="image-placeholder rotating-images image-center">
+          <img src="media/first_universe/whately_luiza_firstUniverse_02.jpg" alt="First Universe" />
+          <img src="media/first_universe/whately_luiza_firstUniverse_03.jpg" alt="First Universe" />
+        </div>
+        <h3>First Universe</h3>
+      </a>
 
-    <a href="wild-side.html" class="project">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>Wild Side</h3>
-    </a>
+      <a href="bepresent.html" class="project tall" data-category="webDesign Experiences SelectedProjects">
+        <div class="image-placeholder rotating-images image-center">
+          <img class="static-img" src="media/bepresent/spiritual ecology 3 copy.png" alt="Be Present" />
+          <img class="static-img" src="media/bepresent/spiritual ecology 4 copy.png" alt="Be Present" />
+        </div>
+        <h3>Be Present</h3>
+      </a>
 
-    <a href="africa-series.html" class="project wide">
-       <img class="image-placeholder" src="media/tavoli/frame-animation.gif" alt="Tavoli project preview">
-     
-      <h3>Africa: The Series</h3>
-    </a>
-  </section>
 
-  <footer class="contact-footer">
-    <p>Contact me:</p>
-    <ul>
-      <li><a href="mailto:luiza@example.com">luiza@example.com</a></li>
-      <li><a href="https://www.linkedin.com/in/luiza" target="_blank">LinkedIn</a></li>
-      <li><a href="https://www.instagram.com/luiza" target="_blank">Instagram</a></li>
-    </ul>
-  </footer>
+      <a href="HoHe.html" class="project" data-category="Product Visual Identity">
+        <div class="image-placeholder rotating-images image-center">
+          <img class="static-img" src="media/HoHe/snow.png" alt="HoHe" />
+          <img class="static-img" src="media/HoHe/poster.png" alt="HoHe" />
+        </div>
+        <h3>HoHe</h3>
+      </a>
 
-</body>
+      <a href="runnyc.html" class="project full" data-category="webDesign Campaign">
+        <div class="image-placeholder image-center">
+          <img class="static-img" src="media/ruunnyc/mainpage copy.png" alt="ruNYc project preview">
+        </div>
+        <h3>ruNYc</h3>
+      </a>
+
+      <a href="SunSeed.html" class="project tall" data-category="Product">
+        <div class="image-placeholder image-center">
+          <img class="static-img" src="media/sunSeed/pic.png" alt="Sun Seed" />
+        </div>
+        <h3>Sun Seed</h3>
+      </a>
+
+      <a href="thewitch.html" class="project" data-category="publication Product">
+        <div class="image-placeholder image-center">
+          <img class="static-img" src="media/the witch/dico mock up 2.png" alt="The Evil Witch is Dead" />
+        </div>
+        <h3>The Evil Witch is Dead!</h3>
+      </a>
+
+      <a href="wildSide.html" class="project full" data-category="webDesign publication">
+        <div class="image-placeholder rotating-images image-center">
+          <img class="static-img" src="media/wildside/ScanLUI10.png" alt="Leafs" />
+          <img class="static-img" src="media/wildside/about.png" alt="Leafs" />
+        </div>
+        <h3>Wild Side</h3>
+      </a>
+
+      <a href="more_swag.html" class="project large" data-category="Campaign Visual Identity">
+        <div class="image-placeholder rotating-images">
+          <img src="media/more_swag/1.png" alt="More Swag" />
+        </div>
+        <h3>More Swag</h3>
+      </a>
+
+      <a href="mr_blue.html" class="project tall" data-category="Experiences webDesign publication">
+        <div class="image-placeholder image-center">
+          <img class="static-img" src="media/mr.Blue/MR BLUE ANIMATION.gif" alt="Mr. Blue" />
+        </div>
+        <h3>Mr. Blue</h3>
+      </a>
+
+      <a href="leafs.html" class="project full" data-category="Typography publication">
+        <div class="image-placeholder rotating-images image-center">
+          <img class="static-img" src="media/leafs/homepage.png" alt="Leafs" />
+          <img class="static-img" src="media/leafs/65926.png" alt="Leafs" />
+        </div>
+        <h3>Leafs</h3>
+      </a>
+
+      <a href="tato.html" class="project large" data-category="experience Visual Identity">
+        <div class="image-placeholder  image-center">
+          <img class="static-img" src="media/tato/1.png" alt="TaTo" />
+        </div>
+        <h3>TaTo</h3>
+      </a>
+
+
+
+      <a href="sonois.html" class="project" data-category="Visual Identity Campaign">
+        <div class="image-placeholder rotating-images image-center">
+          <img class="static-img" src="media/so nois/Artboard 8.png" alt="Só Nois" />
+          <img class="static-img" src="media/so nois/Artboard 15.png" alt="Só Nois" />
+        </div>
+        <h3>Só Nois</h3>
+      </a>
+
+
+      <script>
+        // rotating images
+        document.querySelectorAll('.rotating-images').forEach(container => {
+          const imgs = Array.from(container.querySelectorAll('img'));
+          if (imgs.length === 0) return;
+          let current = 0;
+          imgs.forEach((i, idx) => i.style.opacity = idx === 0 ? '1' : '0');
+          setInterval(() => {
+            imgs[current].style.opacity = '0';
+            current = (current + 1) % imgs.length;
+            imgs[current].style.opacity = '1';
+          }, 3000);
+        });
+      
+        // filters
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projects = Array.from(document.querySelectorAll('.project'));
+      
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            projects.forEach(project => {
+              const anchor = project.closest('a') || project;
+              if (filter === 'all' || project.dataset.category.includes(filter)) {
+                anchor.style.display = '';
+              } else {
+                anchor.style.display = 'none';
+              }
+            });
+          });
+        });
+      
+        // hover-follow titles
+        projects.forEach(project => {
+          const title = project.querySelector('h3');
+          const image = project.querySelector('.image-placeholder');
+      
+          if (!title || !image) return;
+      
+          image.addEventListener('mousemove', (e) => {
+            const rect = image.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            title.style.left = x + 'px';
+            title.style.top = y + 'px';
+            title.style.opacity = 1;
+          });
+      
+          image.addEventListener('mouseleave', () => {
+            title.style.opacity = 0;
+          });
+        });
+
+
+      </script>
+
+  </body>
 </html>
-<script>
-  document.querySelectorAll('.rotating-images').forEach(container => {
-    const images = container.querySelectorAll('img');
-    let current = 0;
-    images[current].classList.add('active');
-
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 3000);
-  });
-</script>

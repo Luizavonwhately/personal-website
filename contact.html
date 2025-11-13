@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Luiza Whately</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Luiza Whately</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <section class="contact-info">
+      <h2>Let’s Get in Touch</h2>
+      <p class="intro">
+        Feel free to reach out for collaborations, questions, or just to say hi.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">Email</span>
+          <a href="mailto:luizawhat@gmail.com" class="value">luizawhat@gmail.com</a>
+        </div>
+        <div class="info-item">
+          <span class="label">Instagram</span>
+          <a href="https://www.instagram.com/luizawhat" target="_blank" class="value">@luizawhat</a>
+        </div>
+        <div class="info-item">
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/luizawhat" target="_blank" class="value">linkedin.com/in/luizawhat</a>
+        </div>
+        <div class="info-item">
+          <span class="label">Location</span>
+          <span class="value">New York, NY</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-footer">
+    © 2025 Luiza Whately — All rights reserved
+  </footer>
+
+  <!-- Floating Popup Text -->
+  <div id="popup-text"></div>
+
+  <script>
+    const popupTexts = [
+      "Let's connect.",
+      "Always up to something.",
+      "What else do you do besides work?",
+      "fav movie soundtrack: Baby Driver",
+      "fav museum: TATE",
+      "fav hobby: sports",
+      "good design feels like intuition",
+      "do you ever stop thinking?",
+      "coffee or tea?",
+      "what are you working on?"
+    ];
+
+    const popupContainer = document.getElementById('popup-text');
+
+    function showPopup() {
+      const randomText = popupTexts[Math.floor(Math.random() * popupTexts.length)];
+      const randomX = Math.random() * (window.innerWidth - 300);
+      const randomY = Math.random() * (window.innerHeight - 100);
+      const colorClass = 'color' + (Math.floor(Math.random() * 5) + 1);
+
+      popupContainer.textContent = randomText;
+      popupContainer.style.left = `${randomX}px`;
+      popupContainer.style.top = `${randomY}px`;
+      popupContainer.className = ''; // reset previous classes
+      popupContainer.classList.add('visible', colorClass);
+
+      // Hide after 20s
+      setTimeout(() => popupContainer.classList.remove('visible'), 20000);
+    }
+
+    // Initial delay, then repeat every 15s
+    setTimeout(showPopup, 2000);
+    setInterval(showPopup, 15000);
+  </script>
+
+</body>
+</html>
